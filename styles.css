@@ -125,11 +125,11 @@ li.active {
 /* Media queries for smaller screens */
 @media (max-width: 375px) {
   .player-container {
-    padding: 15px; /* Reduced padding */
+    padding: 10px; /* Reduced padding */
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .skip-controls,
@@ -139,28 +139,29 @@ li.active {
   }
 
   button {
-    padding: 6px 4px;
-    font-size: 0.7rem;
-    min-height: 35px;
-    min-width: 40px;
+    padding: 4px 2px;
+    font-size: 0.65rem;
+    min-height: 30px;
+    min-width: 30px;
+    flex: 0 0 auto; /* Prevent stretching */
   }
 
   .skip-controls button,
   .play-stop-controls button {
-    max-width: 40px; /* Half size, scaled */
+    max-width: 35px; /* Half size, scaled */
   }
 
   .playback-controls button {
-    max-width: 80px; /* Full size, scaled */
+    max-width: 70px; /* Full size, scaled */
   }
 
   #play-pause,
   #stop {
-    min-height: 45px; /* Slightly taller, scaled */
+    min-height: 40px; /* Slightly taller, scaled */
   }
 
   li {
-    font-size: 1rem;
-    padding: 12px;
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }
