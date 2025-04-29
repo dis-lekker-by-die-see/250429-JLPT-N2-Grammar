@@ -39,7 +39,8 @@ audio {
 }
 
 .skip-controls,
-.play-controls {
+.play-stop-controls,
+.playback-controls {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -67,12 +68,12 @@ button:active {
   background-color: #005bb5;
 }
 
-.play-controls button.active {
+.playback-controls button.active {
   background-color: #ff69b4; /* Pink for active playback buttons */
 }
 
-.play-controls button.active:hover,
-.play-controls button.active:active {
+.playback-controls button.active:hover,
+.playback-controls button.active:active {
   background-color: #ff3e94; /* Darker pink on hover/active */
 }
 
