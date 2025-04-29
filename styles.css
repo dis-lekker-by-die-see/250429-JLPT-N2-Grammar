@@ -34,31 +34,45 @@ audio {
 
 .controls {
   margin: 20px 0;
+  padding: 0 10px;
+}
+
+.skip-controls,
+.play-controls {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px; /* Reduced gap for tighter spacing */
-  padding: 0 10px; /* Prevent overflow */
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 button {
-  padding: 12px 20px; /* Smaller padding */
-  font-size: 1.1rem; /* Slightly smaller font */
+  padding: 12px 20px;
+  font-size: 1.1rem;
   border: none;
   border-radius: 10px;
   background-color: #007aff;
   color: white;
   cursor: pointer;
   touch-action: manipulation;
-  min-height: 50px; /* Smaller min-height */
-  min-width: 90px; /* Smaller min-width */
-  flex: 1; /* Allow buttons to grow/shrink */
-  max-width: 150px; /* Cap button width */
+  min-height: 50px;
+  min-width: 90px;
+  flex: 1;
+  max-width: 150px;
 }
 
 button:hover,
 button:active {
   background-color: #005bb5;
+}
+
+.play-controls button.active {
+  background-color: #ff69b4; /* Pink for active playback buttons */
+}
+
+.play-controls button.active:hover,
+.play-controls button.active:active {
+  background-color: #ff3e94; /* Darker pink on hover/active */
 }
 
 h2 {

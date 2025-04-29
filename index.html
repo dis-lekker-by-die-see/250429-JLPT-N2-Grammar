@@ -11,10 +11,14 @@
       <h1 id="track-title">No Track Playing</h1>
       <audio id="audio-player" controls></audio>
       <div class="controls">
-        <button id="skip-previous">Skip Previous</button>
-        <button id="play-random">Play Random</button>
-        <button id="play-sequential">Play In Order</button>
-        <button id="skip-next">Skip Next</button>
+        <div class="skip-controls">
+          <button id="skip-previous">&lt;&lt;</button>
+          <button id="skip-next">&gt;&gt;</button>
+        </div>
+        <div class="play-controls">
+          <button id="play-random">Play Random</button>
+          <button id="play-sequential">Play In Order</button>
+        </div>
       </div>
       <h2>Playlist</h2>
       <ul id="playlist"></ul>
