@@ -24,6 +24,7 @@ body {
 h1 {
   font-size: 2rem;
   margin: 0 0 20px;
+  white-space: pre-wrap; /* Preserve spaces */
 }
 
 audio {
@@ -94,6 +95,7 @@ li {
   cursor: pointer;
   border-bottom: 1px solid #eee;
   touch-action: manipulation;
+  white-space: pre-wrap; /* Preserve spaces */
 }
 
 li:hover,
