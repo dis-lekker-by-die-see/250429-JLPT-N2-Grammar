@@ -11,7 +11,7 @@ $mp3Files = array_map(function($file) {
 }, $mp3Files);
 
 // Write to JSON file
-$jsonData = json_encode($mp3Files, JSON_PRETTY_PRINT);
+$jsonData = json_encode($mp3Files, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 if (file_put_contents($outputFile, $jsonData) === false) {
     echo "Error: Could not write to $outputFile\n";
 } else {
