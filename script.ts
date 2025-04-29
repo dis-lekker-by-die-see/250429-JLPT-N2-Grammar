@@ -681,7 +681,6 @@
 //   playSequentialButton.classList.add("active"); // Default to sequential mode
 //   populatePlaylist();
 // });
-
 interface Track {
   id: number;
   file: string;
