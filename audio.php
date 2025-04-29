@@ -5,13 +5,15 @@ $outputFile = 'audio-files.json';
 // Get all .mp3 files in the audio directory
 $mp3Files = glob($directory . '*.mp3');
 
-// Ensure paths are relative to the project root
+// Ensure paths are relative and URL-encoded
 $mp3Files = array_map(function($file) {
-    return str_replace('\\', '/', $file); // Normalize path separators
+    $basename = basename($file);
+    $encodedBasename = rawurlencode($basename);
+    return str_replace('\\', '/', $directory . $encodedBasename);
 }, $mp3Files);
 
 // Write to JSON file
-$jsonData = json_encode($mp3Files, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+$jsonData = json_encode($mp3Files, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 if (file_put_contents($outputFile, $jsonData) === false) {
     echo "Error: Could not write to $outputFile\n";
 } else {
