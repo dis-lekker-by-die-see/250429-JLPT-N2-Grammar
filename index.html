@@ -8,11 +8,13 @@
   </head>
   <body>
     <div class="player-container">
-      <h1>Audio Player</h1>
+      <h1 id="track-title">No Track Playing</h1>
       <audio id="audio-player" controls></audio>
       <div class="controls">
+        <button id="skip-previous">Skip Previous</button>
         <button id="play-random">Play Random</button>
         <button id="play-sequential">Play In Order</button>
+        <button id="skip-next">Skip Next</button>
       </div>
       <h2>Playlist</h2>
       <ul id="playlist"></ul>

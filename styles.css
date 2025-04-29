@@ -35,21 +35,25 @@ audio {
 .controls {
   margin: 20px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 8px; /* Reduced gap for tighter spacing */
+  padding: 0 10px; /* Prevent overflow */
 }
 
 button {
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 12px 20px; /* Smaller padding */
+  font-size: 1.1rem; /* Slightly smaller font */
   border: none;
   border-radius: 10px;
   background-color: #007aff;
   color: white;
   cursor: pointer;
   touch-action: manipulation;
-  min-height: 60px;
-  min-width: 120px;
+  min-height: 50px; /* Smaller min-height */
+  min-width: 90px; /* Smaller min-width */
+  flex: 1; /* Allow buttons to grow/shrink */
+  max-width: 150px; /* Cap button width */
 }
 
 button:hover,
@@ -83,6 +87,11 @@ li:active {
   background-color: #f0f0f0;
 }
 
+li.active {
+  background-color: #e6f0ff;
+  font-weight: bold;
+}
+
 /* Media queries for smaller iPhone screens */
 @media (max-width: 375px) {
   .player-container {
@@ -94,10 +103,11 @@ li:active {
   }
 
   button {
-    padding: 12px 25px;
-    font-size: 1rem;
-    min-height: 50px;
-    min-width: 100px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    min-height: 45px;
+    min-width: 80px;
+    max-width: 120px;
   }
 
   li {
