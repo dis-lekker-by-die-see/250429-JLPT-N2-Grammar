@@ -8,11 +8,12 @@ $mp3Files = glob($directory . '*.mp3');
 // Create array with ID, file path, and display name
 $tracks = array_map(function($file, $index) use ($directory) {
     $basename = basename($file);
-    $encodedBasename = rawurlencode($basename); // URL-encode for GitHub
+    $encodedBasename = rawurlencode($basename); // First URL-encode
+    $doubleEncodedBasename = rawurlencode($encodedBasename); // Double URL-encode
     $displayName = str_replace('.mp3', '', $basename); // Original name for display
     return [
         'id' => $index + 1,
-        'file' => str_replace('\\', '/', $directory . $encodedBasename), // Include audio/ prefix
+        'file' => str_replace('\\', '/', $directory . $doubleEncodedBasename),
         'name' => $displayName
     ];
 }, $mp3Files, array_keys($mp3Files));
